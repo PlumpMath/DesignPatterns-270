@@ -4,6 +4,7 @@
     {
         public string GetClothes()
         {
+            var r = 0;
             return "Default cloth";
         }
 

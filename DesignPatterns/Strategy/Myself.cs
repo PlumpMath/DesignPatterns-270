@@ -2,24 +2,24 @@
 
 namespace Strategy
 {
-    class Myself
+    internal class Myself
     {
-        private IWearingStrategy _wearingStrategy = new DefaultWearingStrategy();
+        private IWearingStrategy wearingStrategy;
 
         public Myself(IWearingStrategy wearingStrategy)
         {
-            _wearingStrategy = wearingStrategy;
+            this.wearingStrategy = wearingStrategy;
         }
 
         public void ChangeStrategy(IWearingStrategy wearingStrategy)
         {
-            _wearingStrategy = wearingStrategy;
+            this.wearingStrategy = wearingStrategy;
         }
 
         public void GoOutside()
         {
-            var clothes = _wearingStrategy.GetClothes();
-            var accessories = _wearingStrategy.GetAccessories();
+            var clothes = wearingStrategy.GetClothes();
+            var accessories = wearingStrategy.GetAccessories();
             Console.WriteLine("Today I wore {0} and took {1}", clothes, accessories);
         }
     }
