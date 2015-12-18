@@ -5,20 +5,20 @@ namespace Interpreter
 {
     class CurrentPricesContext
     {
-        Dictionary<string, int> _prices = new Dictionary<string, int>();
+        Dictionary<string, int> prices = new Dictionary<string, int>();
 
         public CurrentPricesContext()
         {
-            _prices.Add("Bed", 3000);
-            _prices.Add("TV", 400);
-            _prices.Add("Laptop", 1500);
+            prices.Add("Bed", 3000);
+            prices.Add("TV", 400);
+            prices.Add("Laptop", 1500);
         }
 
         public int GetPrice(string goodName)
         {
-            if (_prices.ContainsKey(goodName))
+            if (prices.ContainsKey(goodName))
             {
-                return _prices[goodName];
+                return prices[goodName];
             }
             else
             {
@@ -28,13 +28,13 @@ namespace Interpreter
 
         public void SetPrice(string goodName, int cost)
         {
-            if (_prices.ContainsKey(goodName))
+            if (prices.ContainsKey(goodName))
             {
-                _prices[goodName] = cost;
+                prices[goodName] = cost;
             }
             else
             {
-                _prices.Add(goodName, cost);
+                prices.Add(goodName, cost);
             }
         }
     }

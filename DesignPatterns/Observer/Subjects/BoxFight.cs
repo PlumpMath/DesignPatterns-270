@@ -7,7 +7,7 @@ namespace Observer
     {
         public List<IObserver> Observers { get; private set; }
         public int RoundNumber { get; private set; }
-        private Random Random = new Random();
+        private Random random = new Random();
 
         public int BoxerAScore { get; set; }
         public int BoxerBScore { get; set; }
@@ -28,8 +28,8 @@ namespace Observer
         {
             RoundNumber++;
 
-            BoxerAScore += Random.Next(0, 5);
-            BoxerBScore += Random.Next(0, 5);
+            BoxerAScore += random.Next(0, 5);
+            BoxerBScore += random.Next(0, 5);
 
             Notify();
         }
