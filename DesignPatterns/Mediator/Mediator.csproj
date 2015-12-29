@@ -43,13 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BodyPart.cs" />
-    <Compile Include="Brain.cs" />
-    <Compile Include="Ear.cs" />
-    <Compile Include="Eye.cs" />
-    <Compile Include="Face.cs" />
-    <Compile Include="Hand.cs" />
-    <Compile Include="Leg.cs" />
+    <Compile Include="Collegue\BodyPart.cs" />
+    <Compile Include="Mediator\Brain.cs" />
+    <Compile Include="Collegue\Ear.cs" />
+    <Compile Include="Collegue\Eye.cs" />
+    <Compile Include="Collegue\Face.cs" />
+    <Compile Include="Collegue\Hand.cs" />
+    <Compile Include="Collegue\Leg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
